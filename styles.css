@@ -6,13 +6,20 @@ ytd-reel-shelf-renderer {
 
 /* Shorts link in the left sidebar */
 ytd-guide-entry-renderer:has(a[href="/shorts"]),
-ytd-mini-guide-entry-renderer:has(a[href="/shorts"]) {
+ytd-guide-entry-renderer:has(a[href^="/shorts"]),
+ytd-guide-entry-renderer:has([title="Shorts"]),
+ytd-mini-guide-entry-renderer:has(a[href="/shorts"]),
+ytd-mini-guide-entry-renderer:has(a[href^="/shorts"]),
+ytd-mini-guide-entry-renderer:has([title="Shorts"]) {
   display: none !important;
 }
 
 /* Shorts items in search results */
 ytd-reel-item-renderer,
-ytd-video-renderer:has(a[href*="/shorts/"]) {
+ytd-reel-shelf-renderer,
+ytd-shelf-renderer:has(ytd-reel-item-renderer),
+ytd-video-renderer:has(a[href*="/shorts/"]),
+ytd-compact-video-renderer:has(a[href*="/shorts/"]) {
   display: none !important;
 }
 
