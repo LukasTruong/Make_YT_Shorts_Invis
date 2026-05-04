@@ -23,6 +23,13 @@ ytd-compact-video-renderer:has(a[href*="/shorts/"]) {
   display: none !important;
 }
 
+/* Shorts in search results — new ViewModel UI */
+grid-shelf-view-model:has(ytm-shorts-lockup-view-model),
+ytm-shorts-lockup-view-model-v2,
+ytm-shorts-lockup-view-model {
+  display: none !important;
+}
+
 /* Shorts tab on channel pages (Polymer and post-Polymer) */
 tp-yt-paper-tab:has(a[href*="/shorts"]),
 yt-tab-shape:has(a[href*="/shorts"]),
