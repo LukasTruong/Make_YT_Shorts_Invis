@@ -16,7 +16,14 @@ ytd-video-renderer:has(a[href*="/shorts/"]) {
   display: none !important;
 }
 
-/* Shorts tab on channel pages */
-tp-yt-paper-tab:has(a[href*="/shorts"]) {
+/* Shorts tab on channel pages (Polymer and post-Polymer) */
+tp-yt-paper-tab:has(a[href*="/shorts"]),
+yt-tab-shape:has(a[href*="/shorts"]),
+ytd-tab-renderer:has(a[href*="/shorts"]) {
+  display: none !important;
+}
+
+/* Shorts chip in the homepage filter bar */
+yt-chip-cloud-chip-renderer:has(a[href*="shorts"]) {
   display: none !important;
 }

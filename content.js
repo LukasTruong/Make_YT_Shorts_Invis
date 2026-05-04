@@ -1,3 +1,8 @@
+// Redirect away from direct /shorts/ URLs
+if (location.pathname.startsWith('/shorts')) {
+  location.replace('/');
+}
+
 const SHORTS_SELECTORS = [
   'ytd-rich-shelf-renderer[is-shorts]',
   'ytd-reel-shelf-renderer',
@@ -5,6 +10,9 @@ const SHORTS_SELECTORS = [
   'ytd-guide-entry-renderer:has(a[href="/shorts"])',
   'ytd-mini-guide-entry-renderer:has(a[href="/shorts"])',
   'ytd-video-renderer:has(a[href*="/shorts/"])',
+  'yt-chip-cloud-chip-renderer:has(a[href*="shorts"])',
+  'yt-tab-shape:has(a[href*="/shorts"])',
+  'ytd-tab-renderer:has(a[href*="/shorts"])',
 ];
 
 function hideShorts() {
