@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "No Shorts",
+  "version": "1.0",
+  "description": "Hides YouTube Shorts from your feed, sidebar, and search.",
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "css": ["styles.css"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
